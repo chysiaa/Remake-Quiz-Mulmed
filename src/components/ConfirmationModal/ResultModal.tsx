@@ -15,10 +15,10 @@ const ResultModal: React.FC<ResultModalProps> = ({ isOpen, onClose, score, total
     useEffect(() => {
         if (isOpen) {
             setIsVisible(true);
-            setTimeout(() => setIsAnimating(true), 10); // Delay to allow animation class to apply
+            setTimeout(() => setIsAnimating(true), 10);
         } else {
             setIsAnimating(false);
-            const timer = setTimeout(() => setIsVisible(false), 300); // Match the animation duration
+            const timer = setTimeout(() => setIsVisible(false), 300);
             return () => clearTimeout(timer);
         }
     }, [isOpen]);
@@ -36,7 +36,6 @@ const ResultModal: React.FC<ResultModalProps> = ({ isOpen, onClose, score, total
                 className={`bg-white rounded-lg shadow-lg p-6 w-96 transform transition-all duration-300 ease-in-out ${animationClass}`}
                 onClick={(e) => e.stopPropagation()}
             >
-                {/* Add a smiley or check icon depending on the score */}
                 <div className="flex justify-center mb-4">
                     {score === totalQuestions ? (
                         <SmileOutlined className="text-green-500 text-6xl" />
@@ -50,7 +49,6 @@ const ResultModal: React.FC<ResultModalProps> = ({ isOpen, onClose, score, total
                 <h2 className="text-xl font-semibold text-gray-800 text-center">Quiz Selesai!</h2>
                 <p className="mt-2 text-gray-600 text-center">Poin kamu: {score} / {totalQuestions}</p>
                 
-                {/* Add some icons next to text */}
                 <div className="mt-4 flex justify-center gap-x-4">
                     <div className="flex items-center gap-x-1 text-gray-600">
                         <CheckCircleOutlined />

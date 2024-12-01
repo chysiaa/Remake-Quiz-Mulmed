@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { TrophyOutlined, LogoutOutlined, RightCircleOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion'; // Import motion untuk animasi
-import ConfirmationModal from '../ConfirmationModal/ConfirmationModal'; // Tetap menggunakan ConfirmationModal untuk quit
-import ResultModal from '../ConfirmationModal/ResultModal'; // Import ResultModal untuk hasil quiz
-import questions from '../../data/questions'; // Import questions
+import { motion } from 'framer-motion';
+import ConfirmationModal from '../ConfirmationModal/ConfirmationModal';
+import ResultModal from '../ConfirmationModal/ResultModal';
+import questions from '../../data/questions'; 
 import { useLocation } from 'react-router-dom';
 
 const Quiz: React.FC = () => {
@@ -12,26 +12,24 @@ const Quiz: React.FC = () => {
     const [score, setScore] = useState(0);
     const [answered, setAnswered] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-    const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);  // State untuk ConfirmationModal
-    const [isResultModalOpen, setIsResultModalOpen] = useState(false);  // State untuk ResultModal
+    const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
+    const [isResultModalOpen, setIsResultModalOpen] = useState(false);
     const [fadeIn, setFadeIn] = useState(false);
-    const [shuffledQuestions, setShuffledQuestions] = useState(questions); // State untuk menyimpan pertanyaan yang diacak
+    const [shuffledQuestions, setShuffledQuestions] = useState(questions);
     const navigate = useNavigate();
     const location = useLocation();
     const { numQuestions } = location.state || { numQuestions: 5 };
 
     useEffect(() => {
-        setFadeIn(true);  // Set fadeIn to true when the component loads
+        setFadeIn(true);
     }, []);
 
     useEffect(() => {
-        // Shuffle questions only when the component mounts
         const shuffled = [...questions].sort(() => Math.random() - 0.5);
         setShuffledQuestions(shuffled);
     }, []);
 
     useEffect(() => {
-        // Trigger ResultModal setelah menjawab pertanyaan terakhir
         if (currentQuestionIndex >= numQuestions) {
             setIsResultModalOpen(true);
         }
@@ -52,18 +50,17 @@ const Quiz: React.FC = () => {
             setAnswered(false);
             setSelectedAnswer(null);
         } else {
-            // Setelah pertanyaan terakhir, ResultModal muncul
             setIsResultModalOpen(true);
         }
     };
 
     const handleQuit = () => {
-        setIsConfirmationModalOpen(true);  // Tampilkan ConfirmationModal ketika quit
+        setIsConfirmationModalOpen(true);
     };
 
     const confirmQuit = () => {
         setIsConfirmationModalOpen(false);
-        navigate('/');  // Navigasi keluar
+        navigate('/'); 
     };
 
     const cancelQuit = () => {
@@ -72,21 +69,21 @@ const Quiz: React.FC = () => {
 
     const handleCloseResultModal = () => {
         setIsResultModalOpen(false);
-        navigate('/');  // Navigasi ke halaman utama setelah selesai
+        navigate('/'); 
     };
 
     return (
         <motion.div
             className="min-h-screen bg-gradient-to-b from-blue-400 to-blue-300 flex justify-center items-center p-6"
-            initial={{ opacity: 0 }}  // Set initial opacity to 0
-            animate={{ opacity: 1 }}  // Animate opacity to 1
-            transition={{ duration: 1 }}  // Set duration of the fade-in effect
+            initial={{ opacity: 0 }}  
+            animate={{ opacity: 1 }}  
+            transition={{ duration: 1 }}  
         >
             <motion.div
                 className="quiz-section max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md mt-10 relative"
-                initial={{ opacity: 0 }}  // Set initial opacity to 0
-                animate={{ opacity: 1 }}  // Animate opacity to 1
-                transition={{ duration: 1 }}  // Set duration of the fade-in effect
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }} 
+                transition={{ duration: 1 }} 
             >
                 <div className="flex justify-between mb-4">
                     <div className="flex items-center bg-blue-100 text-blue-800 py-2 px-4 rounded shadow">
@@ -101,17 +98,16 @@ const Quiz: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Soal dengan animasi transisi */}
                 <motion.div
-                    key={currentQuestionIndex}  // Tambahkan key berdasarkan indeks soal
-                    initial={{ opacity: 0, x: -100 }}  // Soal masuk dari kiri
-                    animate={{ opacity: 1, x: 0 }}  // Soal bergerak ke posisi normal
-                    exit={{ opacity: 0, x: 100 }}  // Soal keluar ke kanan
+                    key={currentQuestionIndex} 
+                    initial={{ opacity: 0, x: -100 }} 
+                    animate={{ opacity: 1, x: 0 }}  
+                    exit={{ opacity: 0, x: 100 }} 
                     transition={{
                         type: 'spring',
-                        stiffness: 200,  // Mengurangi stiffness untuk animasi yang lebih lambat
-                        damping: 50,  // Meningkatkan damping untuk membuat pergerakan lebih halus
-                        duration: 1  // Durasi animasi lebih lama
+                        stiffness: 200,  
+                        damping: 50,  
+                        duration: 1  
                     }} 
                 >
                     <h2 className="text-2xl font-semibold mb-4 text-center">
@@ -124,7 +120,7 @@ const Quiz: React.FC = () => {
                                 <img
                                     src={shuffledQuestions[currentQuestionIndex].mediaSrc}
                                     alt="Question related"
-                                    className="w-full max-w-[80%] h-auto" // Ensure the image is centered and properly sized
+                                    className="w-full max-w-[80%] h-auto" 
                                 />
                             )}
                             {shuffledQuestions[currentQuestionIndex].mediaType === 'video' && (
@@ -191,14 +187,11 @@ const Quiz: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Confirmation Modal untuk quit */}
                 <ConfirmationModal
                     isOpen={isConfirmationModalOpen}
                     onClose={cancelQuit}
                     onConfirm={confirmQuit}
                 />
-
-                {/* Result Modal yang muncul setelah pertanyaan terakhir */}
                 <ResultModal
                     isOpen={isResultModalOpen}
                     onClose={handleCloseResultModal}

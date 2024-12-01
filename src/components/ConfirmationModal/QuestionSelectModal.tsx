@@ -7,17 +7,17 @@ interface QuestionSelectModalProps {
 }
 
 const QuestionSelectModal: React.FC<QuestionSelectModalProps> = ({ isOpen, onClose, onConfirm }) => {
-    const [numQuestions, setNumQuestions] = useState(5); // Default to 5 questions
+    const [numQuestions, setNumQuestions] = useState(5);
     const [isVisible, setIsVisible] = useState(isOpen);
     const [isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
         if (isOpen) {
             setIsVisible(true);
-            setTimeout(() => setIsAnimating(true), 10); // Delay ensures class application after mount
+            setTimeout(() => setIsAnimating(true), 10);
         } else {
             setIsAnimating(false);
-            const timer = setTimeout(() => setIsVisible(false), 300); // Match animation duration
+            const timer = setTimeout(() => setIsVisible(false), 300); 
             return () => clearTimeout(timer);
         }
     }, [isOpen]);
@@ -33,7 +33,6 @@ const QuestionSelectModal: React.FC<QuestionSelectModalProps> = ({ isOpen, onClo
             >
                 <h2 className="text-2xl font-bold text-blue-600 text-center mb-4">Pilih Jumlah Soal</h2>
                 <div className="flex flex-col items-center">
-                    {/* Slider */}
                     <input
                         type="range"
                         min="5"
@@ -42,23 +41,19 @@ const QuestionSelectModal: React.FC<QuestionSelectModalProps> = ({ isOpen, onClo
                         onChange={(e) => setNumQuestions(Number(e.target.value))}
                         className="w-full slider-thumb rounded-lg accent-blue-500"
                     />
-                    {/* Number Display */}
                     <span className="text-xl font-semibold mt-2 text-blue-800">{numQuestions}</span>
                 </div>
                 <hr className="my-4" />
-                {/* Buttons */}
                 <div className="flex justify-between">
-                    {/* Cancel Button */}
                     <button
                         onClick={onClose}
                         className="w-32 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300"
                     >
                         Batal
                     </button>
-                    {/* Start Quiz Button */}
                     <button
                         onClick={() => {
-                            onConfirm(numQuestions); // Pass the selected number of questions
+                            onConfirm(numQuestions);
                             onClose();
                         }}
                         className="w-32 bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300"

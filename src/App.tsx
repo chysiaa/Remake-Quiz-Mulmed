@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Quiz from './components/QuizSection/QuizSection'; // Ensure this path is correct

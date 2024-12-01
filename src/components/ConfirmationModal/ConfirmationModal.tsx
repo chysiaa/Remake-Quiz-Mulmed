@@ -13,10 +13,10 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({ isOpen, onClose, 
     useEffect(() => {
         if (isOpen) {
             setIsVisible(true);
-            setTimeout(() => setIsAnimating(true), 10); // Delay ensures class application after mount
+            setTimeout(() => setIsAnimating(true), 10);
         } else {
             setIsAnimating(false);
-            const timer = setTimeout(() => setIsVisible(false), 300); // Match animation duration
+            const timer = setTimeout(() => setIsVisible(false), 300);
             return () => clearTimeout(timer);
         }
     }, [isOpen]);
