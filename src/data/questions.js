@@ -63,7 +63,7 @@ const questions = [
             
         ],
         mediaType: "video",
-        mediaSrc: "asset/beo.mp4"
+        mediaSrc: "asset/Beoo.mp4"
     },
     {
         numb: 6,
