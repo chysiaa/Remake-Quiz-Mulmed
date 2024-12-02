@@ -1,7 +1,7 @@
 const questions = [
     {
         numb: 1,
-        question: "Hewan ini dikenal sebagai sahabat manusia dan suka menggonggong. Siapakah dia?",
+        question: "Hewan ini dapat menggonggong dan dikenal juga sebagai sahabat manusia. Hewan apakah dia?",
         answer: "Anjing",
         options: [
             "Kucing", 
@@ -14,7 +14,7 @@ const questions = [
     },
     {
         numb: 2,
-        question: "Hewan ini bisa terbang dan memiliki bulu berwarna-warni. Apa nama hewan ini?",
+        question: "Jenis burung ini dapat melebarkan bulu ekornya untuk memikat betina dan menunjukkan dominansi. Burung apakah dia?",
         answer: "Burung Merak",
         options: [
             "Ayam", 
@@ -27,7 +27,7 @@ const questions = [
     },
     {
         numb: 3,
-        question: "Hewan ini dikenal dengan kemampuan berlari cepat dan bintik-bintik di tubuhnya. Apakah hewan ini?",
+        question: "Hewan berikut dikenal sebagai mamalia tercepat didunia dan tinggal dibenua Afrika. Hewan apakah dia?",
         answer: "Cheetah",
         options: [
             "Macan", 
@@ -40,7 +40,7 @@ const questions = [
     },
     {
         numb: 4,
-        question: "Hewan ini memiliki belalai panjang dan dikenal sebagai hewan darat terbesar. Apa namanya?",
+        question: "Hewan ini memiliki karakteristik berupa belalai yang panjang dan mempunyai gading. Apa nama hewan tersebut?",
         answer: "Gajah",
         options: [
             "Badak", 
@@ -53,7 +53,7 @@ const questions = [
     },
     {
         numb: 5,
-        question: "Hewan ini dikenal pandai meniru suara manusia. Hewan apakah ini?",
+        question: "Jenis burung ini dapat meniru suara manusia dan memiliki paruh bengkok. Hewan apakah ini?",
         answer: "Burung Beo",
         options: [
             "Burung Hantu", 
@@ -67,7 +67,7 @@ const questions = [
     },
     {
         numb: 6,
-        question: "Hewan ini sangat cerdas dan suka melompat di laut. Apa namanya?",
+        question: "Hewan air ini memiliki kecerdasan lebih tinggi daripada hewan serupa lainnya dan suka melompat diatas permukaan laut. Apa namanya?",
         answer: "Lumba-lumba",
         options: [
             "Lumba-lumba", 
@@ -80,7 +80,7 @@ const questions = [
     },
     {
         numb: 7,
-        question: "Hewan ini suka memanjat pohon dan dikenal dengan ekor panjangnya. Apa namanya?",
+        question: "Mamalia ini suka memanjat pohon dan memiliki ekor panjangnya. Apa namanya?",
         answer: "Monyet",
         options: [
             "Monyet", 
@@ -93,7 +93,7 @@ const questions = [
     },
     {
         numb: 8,
-        question: "Hewan ini dapat mengubah warna tubuhnya untuk berkamuflase. Siapakah dia?",
+        question: "Reptil ini dapat mengubah warna tubuhnya untuk berkamuflase. Apa nama hewan tersebut?",
         answer: "Bunglon",
         options: [
             "Kadal", 
@@ -106,7 +106,7 @@ const questions = [
     },
     {
         numb: 9,
-        question: "Hewan ini memiliki cangkang keras dan berjalan lambat. Apa namanya?",
+        question: "Hewan ini memiliki cangkang keras dan cenderung berjalan lambat. Apa namanya?",
         answer: "Kura-kura",
         options: [
             "Kura-kura", 
@@ -119,7 +119,7 @@ const questions = [
     },
     {
         numb: 10,
-        question: "Hewan ini dikenal dengan telinganya yang panjang dan suka makan wortel. Siapakah dia?",
+        question: "Hewan ini memiliki telinga yang panjang, dapat melompat tinggi dan identik dengan wortel. Siapakah dia?",
         answer: "Kelinci",
         options: [
             "Rusa", 
@@ -132,7 +132,7 @@ const questions = [
     },
     {
         numb: 11,
-        question: "Hewan ini berbulu tebal dan hidup di daerah dingin. Apa namanya?",
+        question: "Hewan predator berbulu putih tebal dan hidup di daerah kutub. Hewan apakah dia?",
         answer: "Beruang Kutub",
         options: [
             "Beruang Coklat", 
@@ -145,7 +145,7 @@ const questions = [
     },
     {
         numb: 12,
-        question: "Hewan ini berbisa dan dikenal dengan taringnya yang tajam. Siapakah dia?",
+        question: "Binatang ini tidak memiliki kaki namun memiliki taring dan beberapa diantaranya memiliki bisa. Hewan apakah dia?",
         answer: "Ular",
         options: [
             "Komodo", 
@@ -158,7 +158,7 @@ const questions = [
     },
     {
         numb: 13,
-        question: "Hewan ini disebut juga sebagai 'Raja Hutan'. Apa namanya?",
+        question: "Binatang ini dikenal sebagai 'Raja Hutan'. Apakah namanya?",
         answer: "Singa",
         options: [
             "Harimau", 
@@ -171,7 +171,7 @@ const questions = [
     },
     {
         numb: 14,
-        question: "Hewan ini bisa berenang dan dikenal dengan siripnya yang lebar. Apa namanya?",
+        question: "Hewan air memiliki sirip yang lebar dan memiliki duri diekornya sebagai bentuk perlindungan. Apa nama binatang tersebut?",
         answer: "Ikan Pari",
         options: [
             "Ikan Hiu", 
@@ -184,7 +184,7 @@ const questions = [
     },
     {
         numb: 15,
-        question: "Hewan ini memiliki kantung di perutnya untuk membawa anak-anaknya. Siapakah dia?",
+        question: "Binatang marsupial dari Australia ini memiliki kantung diperutnya untuk menyimpan anak-anaknya. Apakah dia?",
         answer: "Kanguru",
         options: [
             "Koala", 
@@ -197,7 +197,7 @@ const questions = [
     },
     {
         numb: 16,
-        question: "Hewan ini dikenal dengan suara melengkingnya dan sering dijadikan hewan peliharaan. Apa namanya?",
+        question: "Jenis burung ini digemari oleh peminat burung kicau dan berwarna kuning. Apakah namanya?",
         answer: "Burung Kenari",
         options: [
             "Burung Kenari", 
@@ -210,7 +210,7 @@ const questions = [
     },
     {
         numb: 17,
-        question: "Hewan ini dikenal dengan lehernya yang panjang. Apa namanya?",
+        question: "Binatang ini dikenal dengan lehernya yang panjang. Apa namanya?",
         answer: "Jerapah",
         options: [
             "Jerapah", 
@@ -223,7 +223,7 @@ const questions = [
     },
     {
         numb: 18,
-        question: "Hewan ini punya bulu dengan banyak bintik hitam. Apa nama hewan ini?",
+        question: "Hewan ini memiliki bulu dengan corak bintik hitam yang mirip dengan cheetah. Apa nama hewan ini?",
         answer: "Leopard",
         options: [
             "Singa", 
@@ -236,7 +236,7 @@ const questions = [
     },
     {
         numb: 19,
-        question: "Hewan ini dikenal dengan suara 'kukuk'. Apa namanya?",
+        question: "Burung ini merupakan predator nokturnal, suara kepakan yang hampir tidak terdengar, serta dapat memutarkan kepalanya 270 derajat. Apa namanya?",
         answer: "Burung Hantu",
         options: [
             "Burung Hantu", 
@@ -249,7 +249,7 @@ const questions = [
     },
     {
         numb: 20,
-        question: "Hewan ini suka hidup di air dan memiliki kulit licin. Apa namanya?",
+        question: "Hewan ini merupakan hewan amfibi dan bergerak dengan cara melompat. Apa hewan tersebut?",
         answer: "Katak",
         options: [
             "Kura-kura", 
@@ -262,7 +262,7 @@ const questions = [
     },
     {
         numb: 21,
-        question: "Hewan ini dikenal dengan loreng hitam dan oranye di tubuhnya. Apakah ini?",
+        question: "Hewan ini memiliki corak loreng hitam dan oranye ditubuhnya. Hewan apakah ini?",
         answer: "Harimau",
         options: [
             "Harimau", 
@@ -275,7 +275,7 @@ const questions = [
     },
     {
         numb: 22,
-        question: "Hewan ini dikenal dengan suara melengkingnya dan sering dijadikan hewan peliharaan. Apa namanya?",
+        question: "Hewan ini memiliki populasi yang tinggi dibeberapa negara dan dapat dijadikan hewan balap diperlombaan. Apa namanya?",
         answer: "Burung Merpati",
         options: [
             "Burung Kenari", 
@@ -288,7 +288,7 @@ const questions = [
     },
     {
         numb: 23,
-        question: "Siapakah aku? Aku suka tertawa seperti manusia.",
+        question: "Aku tinggal dibenua Afrika dan dapat mengeluarkan suara tertawa seperti manusia. Hewan apakah aku?",
         answer: "Hyena",
         options: [
             "Hyena", 
@@ -302,7 +302,7 @@ const questions = [
 
     {
         numb: 24,
-        question: "Suara apakah ini? Aku suka menggonggong di malam hari.",
+        question: "Hewan ini dikenal sebagai representasi dari kecerdasan dan kelicikan. Apa nama hewan tersebut?",
         answer: "Rubah",
         options: [
             "Rubah", 
@@ -315,7 +315,7 @@ const questions = [
     },
     {
         numb: 25,
-        question: "Hewan apakah ini yang mengeluarkan suara mendalam saat berenang?",
+        question: "Hewan ini merupakan hewan terbesar didunia dan dapat mengeluarkan frekuensi suara didalam air?",
         answer: "Paus",
         options: [
             "Lumba-lumba", 

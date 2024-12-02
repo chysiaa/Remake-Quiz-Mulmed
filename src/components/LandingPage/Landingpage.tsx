@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import QuestionSelectModal from '../ConfirmationModal/QuestionSelectModal';
 import questions from '../../data/questions'; 
-import backgroundImage from '../LandingPage/Green Brown Illustration World Animal Day Video.png'
+import backgroundImage from '../LandingPage/Green Brown Illustration World Animal Day Video.png';
+
 const LandingPage: React.FC = () => {
 
     const navigate = useNavigate();
@@ -55,3 +56,4 @@ const LandingPage: React.FC = () => {
 };
 
 export default LandingPage;
+
